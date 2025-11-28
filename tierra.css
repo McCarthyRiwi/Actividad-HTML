@@ -12,12 +12,12 @@
 
 .tierra::before {
   content: "";
-  width: 120%;
-  height: 120%;
-  background: url(assets/tierra.png) center/cover no-repeat;
+  width: 600px;
+  height: 600px;
+  background: url(assets/tierra.png) no-repeat;
   position: absolute;
-  bottom: -400px;
-  left: -900px;
+  bottom: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -40,9 +40,9 @@
 
 .sol::before {
   content: "";
-  width: 80%;
-  height: 80%;
-  background: url(assets/sol.png) center/cover no-repeat;
+  width: 900px;
+  height: 900px;
+  background: url(assets/sol.png) no-repeat;
   position: absolute;
   bottom: -400px;
   left: 25%;
@@ -60,9 +60,31 @@
   right: 0;
 }
 
-.marte {
-  background: url(assets/background-espacio.jpg) center/cover no-repeat;
+.luna {
+  background: url(assets/background-espacio.jpg) no-repeat;
   width: 100%;
   height: 100vh;
   position: relative;
+}
+
+.luna::before {
+  content: "";
+  width: 500px;
+  height: 500px;
+  background: url(assets/luna.png) no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: rotate(30deg);
+}
+
+.luna .satelite {
+  background: url(assets/satelite-1.gif);
+  width: 200px;
+  height: 200px;
+  filter: opacity(50%);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
