@@ -8,65 +8,62 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  perspective: 1200px;
 }
 
 .via-lactea {
-  width: 50%;
-  height: 20vh;
+  width: 80%;
+  height: 40vh;
   border-radius: 50%;
-  transform: rotate(-20deg);
   position: relative;
-  /* transition: orbit 10s ease; */
-  animation: orbit-planets 180s linear infinite;
-  transform: matrix();
+  top: 20%;
 }
 
 .galaxia .via-lactea img {
-  animation: orbit 8s linear infinite;
   width: 8rem;
 }
 
-.via-lactea .tierra {
-  position: absolute;
-  left: 25%;
+.via-lactea {
+  position: relative;
+  /* transform-style: preserve-3d; */
+  animation: rotate 35s linear infinite;
 }
 
-.via-lactea .marte {
+.via-lactea img {
+  width: 7rem;
   position: absolute;
-  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.via-lactea .luna {
-  position: absolute;
-  left: 75%;
+.tierra {
+  transform: rotateY(0deg) translateZ(200px);
 }
 
-.via-lactea .mercurio {
-  position: absolute;
-  left: 100%;
+.marte {
+  transform: rotateY(90deg) translateZ(200px);
 }
 
-.via-lactea .sol {
+.luna {
+  transform: rotateY(180deg) translateZ(200px);
+}
+
+.mercurio {
+  transform: rotateY(270deg) translateZ(200px);
+}
+
+.sol {
+  animation: none !important;
   position: absolute;
   top: 40%;
   left: 40%;
-  animation: none !important;
 }
 
-@keyframes orbit-top {
-  from {
-    transform: rotate(0deg) translateX(150px);
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
   }
-  to {
-    transform: rotate(360deg) translateX(150px);
-  }
-}
-
-@keyframes orbit-bottom {
-  from {
-    transform: rotate(0deg) translateX(150px);
-  }
-  to {
-    transform: rotate(360deg) translateX(150px);
+  100% {
+    transform: rotateY(360deg);
   }
 }
