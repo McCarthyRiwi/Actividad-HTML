@@ -30,6 +30,9 @@
   --standard-transition: 2s ease-in-out;
   --standard-border-radius: var(--spacing-sm);
   --max-width: 85rem;
+  --max-width-992px: 45rem;
+  --max-width-768px: 40rem;
+  --max-width-576px: 30rem;
 }
 
 /* Estilos generales */
@@ -55,11 +58,16 @@ body {
 }
 
 nav {
-  width: 100%;
+  width: 80%;
+  margin: var(--spacing-md) 0 0 0;
   height: 10vh;
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
+  font-size: var(--font-size-md);
+  font-weight: 700;
   backdrop-filter: blur(5px);
   box-shadow: var(--standard-box-shadow);
+  border-radius: var(--standard-border-radius);
   position: fixed;
   top: 0;
   z-index: 3;
@@ -78,6 +86,10 @@ nav ul li {
   cursor: pointer;
 }
 
+nav ul li:hover {
+  color: var(--color-main);
+}
+
 main {
   width: 100%;
   max-width: var(--max-width);
@@ -91,8 +103,8 @@ h2 {
 /* Tierra */
 
 .meteorito {
-  width: 120px;
-  height: 120px;
+  width: calc(var(--spacing-xl) * 2);
+  height: calc(var(--spacing-xl) * 2);
   position: absolute;
   animation: vuelo-meteorito 5s ease-in-out forwards;
   z-index: 2;
@@ -144,8 +156,8 @@ h2 {
 }
 
 .planet .satelite {
-  width: 150px;
-  height: 150px;
+  width: calc(var(--spacing-xl) * 1.5);
+  height: calc(var(--spacing-xl) * 1.5);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -192,8 +204,8 @@ h2 {
 }
 
 .sol .satelite {
-  width: 150px;
-  height: 150px;
+  width: calc(var(--spacing-xl) * 1.5);
+  height: calc(var(--spacing-xl) * 1.5);
   filter: opacity(50%);
   position: absolute;
   top: 0;
@@ -201,8 +213,8 @@ h2 {
 }
 
 .asteroide {
-  width: 100px;
-  height: 100px;
+  width: calc(var(--spacing-xl) * 2);
+  height: calc(var(--spacing-xl) * 2);
   position: absolute;
   transform: rotate(220deg);
   animation: vuelo-asteroide 35s infinite linear;
@@ -245,8 +257,8 @@ h2 {
 }
 
 .luna .satelite {
-  width: 150px;
-  height: 150px;
+  width: calc(var(--spacing-xl) * 2);
+  height: calc(var(--spacing-xl) * 2);
   filter: opacity(50%);
   position: absolute;
   top: 0;
@@ -276,6 +288,16 @@ h2 {
   margin: 0 var(--spacing-xs);
 }
 
+.team-members img {
+  width: calc(var(--spacing-xl) * 3);
+}
+
+footer {
+  max-width: var(--max-width);
+}
+
+/* Keyframes */
+
 @keyframes vuelo-meteorito {
   0% {
     transform: translate(
@@ -301,3 +323,98 @@ h2 {
     transform: translate(90vw, 10vh) rotate(300deg);
   }
 }
+
+/* Media queries */
+
+@media (max-width: 992px) {
+  main {
+    max-width: var(--max-width-992px);
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .planet-title {
+    margin: 0 0 calc(var(--spacing-xl) * -0.8) 0;
+  }
+
+  .meteorito {
+    display: none;
+  }
+
+  .asteroide {
+    width: calc(var(--spacing-xl));
+  }
+
+  .team-members img {
+    width: calc(var(--spacing-xl) * 2);
+  }
+
+  .asteroide-footer {
+    width: calc(var(--spacing-xl) * 7);
+  }
+
+  footer {
+    max-width: var(--max-width-992px);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: var(--max-width-768px);
+  }
+
+  .asteroide {
+    width: calc(var(--spacing-xl));
+  }
+
+  .tripulation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tripulation .team-members {
+    flex-direction: row;
+    width: 80%;
+    min-height: 20vh;
+    margin: var(--spacing-md) 0;
+  }
+
+  .team-members img {
+    width: calc(var(--spacing-xl) * 2);
+  }
+
+  .asteroide-footer {
+    width: calc(var(--spacing-xl) * 6);
+  }
+
+  footer {
+    max-width: var(--max-width-768px);
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    max-width: var(--max-width-576px);
+  }
+
+  .team-members img {
+    width: calc(var(--spacing-xl) * 1.5);
+  }
+
+  .asteroide-footer {
+    width: calc(var(--spacing-xl) * 5);
+  }
+
+  footer {
+    max-width: var(--max-width-576px);
+  }
+}
+
+/* 
+1400px 
+1200px 
+992px 
+768px
+576px */
