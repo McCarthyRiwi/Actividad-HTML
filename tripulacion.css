@@ -48,11 +48,12 @@ body {
   font-family: var(--body-font);
   width: 100%;
   height: 100vh;
-  background: url(assets/background/background-6.gif);
+  background: url(assets/background/background-6.gif) center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--color-light);
 }
 
 nav {
@@ -103,57 +104,27 @@ h2 {
   font-family: var(--heading-font);
 }
 
-.galaxia {
+.tripulation {
+  max-width: var(--max-width);
   width: 100%;
-  height: 100vh;
+  min-height: 50vh;
   display: flex;
-  justify-content: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: var(--standard-border-radius);
+  width: 20%;
+  min-height: 15vh;
+  margin: 0 var(--spacing-xs);
 }
 
-.via-lactea {
-  width: 30%;
-  height: 30vh;
-  position: relative;
-  animation: orbit 35s linear infinite;
-}
-
-.via-lactea img {
-  width: 6rem;
-  position: absolute;
-  /* transform: translateY(-50%); */
-}
-
-.tierra {
-  top: 0;
-  left: 0;
-}
-
-.mercurio {
-  bottom: 80%;
-  right: 60%;
-}
-
-.marte {
-  top: 80%;
-  left: 60%;
-}
-
-.luna {
-  bottom: 0;
-  right: 0;
-}
-
-.sol {
-  top: 40%;
-  left: 40%;
-}
-
-@keyframes orbit {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
+.team-members img {
+  width: calc(var(--spacing-xl) * 3);
 }
