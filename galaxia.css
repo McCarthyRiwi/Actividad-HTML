@@ -125,23 +125,23 @@ h2 {
 }
 
 .tierra {
-  top: 0;
-  left: 0;
+  top: 80%;
+  left: 80%;
 }
 
 .mercurio {
   bottom: 80%;
-  right: 60%;
+  right: 80%;
 }
 
 .marte {
-  top: 80%;
-  left: 60%;
+  bottom: 80%;
+  left: 80%;
 }
 
 .luna {
-  bottom: 0;
-  right: 0;
+  top: 80%;
+  right: 80%;
 }
 
 .sol {

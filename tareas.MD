@@ -18,19 +18,19 @@ Terminar la pagina de inicio
 
 ### 1-Galaxia catalogo
 
-- Responsable:
-- Estado:
+- Responsable: Geisler
+- Estado: asignado
 
 Puede ser un catálogo de:
 Lugares, personajes, reglas, artefactos, eventos, clanes, etc.
-Debe existir una sección dedicada a esto con:
+Debe existir una sección dedicada a esto.
 
 ---
 
 ### 2-Script index (Reemplazar textos lorem cumpliendo lo descrito en _criterios de aceptacion_)
 
-- Responsable:
-- Estado:
+- Responsable: Sabin
+- Estado: Asignado
 
 #### Criterios de aceptacion
 
@@ -49,8 +49,8 @@ aside, glosario, curiosidades, notas, citas, etc.
 
 ### 3-Pie de pagina / Footer (ver _criterios de aceptacion_)
 
-- Responsable:
-- Estado:
+- Responsable: Andres
+- Estado: Asignado
 
 #### Criterios de aceptacion
 
@@ -64,12 +64,19 @@ Enlace a la versión publicada (cuando exista).
 
 ### 4-Calidad imagenes planetas (Mejorar la calidad de los planetas en la siguiente ruta assests/planets/)
 
-- Responsable:
-- Estado:
+- Responsable: Sabin
+- Estado: Asignado
 
 ---
 
 ### 5-Gifs (Es necesario cambiar el formato de los algunos elementos visuales a formato gif, para mejorar la UX en la pagina los archivos se encuentran en la siguiente ruta assets/decoration)
 
-- Responsable:
-- Estado:
+- Responsable: Sabin
+- Estado: Asignado
+
+---
+
+### 6-Galaxia (Es necesario modificar el estilo visual de esta seccion y terminar la animacion)
+
+- Responsable: Juan Jose
+- Estado: En proceso
